@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #green{
+        display: none;
+    }
+    #red{
+        display: none;
+    }
+    #btn{
+        display: none;
+
+    }
+</style>
+<body>
+    <center>
+        <input id="one" onkeyup="val()" type="text"><br><br>
+        <input id="two" onkeyup="cal()" type="text"><br>
+
+        <p id="green" style="color:green ;">input is valid</p><br>
+        <p id="red" style="color:red;">input is not valid</p><br><br><br><br><br>
+
+
+
+        <button id="btn" style="background-color:blue ; font-size:60px;">submit</button>
+
+
+
+
+
+
+    </center>
+
+    <script>
+        function val(){
+           var vname=document.getElementById('one');
+            var greenpara=document.getElementById('green')
+           var  redpara=document.getElementById('red')
+
+           if(vname.value.match(/[a-z]/)){
+            greenpara.style="display:block;"
+            redpara.style="display:none;"
+
+            vname.style="border:3px solid green;"
+
+           }
+           else{
+            redpara.style="display:block;"
+            greenpara.style="display:none;"
+            vname.style="border:3px solid red;"
+           }
+
+            
+        }
+
+
+        function cal(){
+            var vname=document.getElementById('one').value;
+            var sname=document.getElementById('two').value;
+           var  mybtn=document.getElementById('btn');
+
+           if(sname == vname){
+            mybtn.style.display="block"
+           }
+
+           else{
+           }
+        }
+    </script>
+</body>
+</html>

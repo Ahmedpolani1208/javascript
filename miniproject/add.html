@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="myinp">
+        <button id="add">+</button>
+        <div id="todocon"></div>
+    </div>
+
+    <script>
+        let addl= document.getElementById("add")
+        let myinpl =document.getElementById("myinp")
+        let todoconl = document.getElementById("todocon")
+
+        addl.addEventListener("click" , function(){
+            var paragraph = document.createElement("p")
+
+            paragraph.innerText = myinpl.value
+            todoconl.appendChild(paragraph)
+            myinpl.value="";
+
+
+            paragraph.addEventListener("click",function(){
+                paragraph.style.textDecoration = "line-through"
+            })
+            paragraph.addEventListener("dblclick",function(){
+                todoconl.removeChild(paragraph)
+            })
+        })
+    </script>
+</body>
+</html>

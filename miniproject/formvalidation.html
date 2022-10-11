@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1{
+            display: none;
+        }
+        #p2{
+            display: none;
+        }
+        #pname{
+            border: none;
+        }
+        #name2{
+            border: none;
+        }
+        #btn{
+            display: none;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>FORM VALIDATION</h1>
+        <input type="text" id="pname" placeholder="enter your name" onkeyup="input()" style="width:280px ;">
+        <br><br><input type="text" id="name2" placeholder="confirm your name" onkeyup="sinput()" style="width:280px ;">
+
+        <p id="p1" style="color:green ;">input is valid</p>
+        <p id="p2" style="color:red ;">input is not valid</p><br><br>
+        <!-- <p id="p1" style="color:green ;"></p> -->
+
+
+        <button id="btn" style="background-color: blue;">submit</button>
+    </center>
+    <script>
+        function input(){
+            var vname = document.getElementById("pname");
+            var mp1 = document.getElementById("p1");
+            var mp2 = document.getElementById("p2");
+
+            if(vname.value.match(/[a-z]/)){
+                mp1.style.display="block"
+                mp2.style.display="none"
+                vname.style.border="3px solid green"
+            }
+            else{
+                mp2.style.display="block"
+                mp1.style.display="none"
+                vname.style.border="3px solid red"
+
+            }
+        }
+        function sinput(){
+            var vname = document.getElementById("pname").value;
+            var sname = document.getElementById("name2").value;
+            var mybtn = document.getElementById("btn");
+
+            if(sname == vname){
+                mybtn.style.display="block"
+                
+
+            }
+            else{
+                
+
+            }
+
+    
+        }
+
+        
+    </script>
+</body>
+</html>
+

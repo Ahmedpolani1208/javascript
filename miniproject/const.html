@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const cars = ["civic","city","corolla","elantra","alsvin"]
+        document.getElementById("demo1").innerHTML=cars[2]
+
+
+        // const persons = {
+        //     firstname :"ahmed",
+        //     lastname : "polani",
+        //     age:12
+        // }
+        // document.getElementById("demo2").innerHTML="person name is " + persons.firstname , "his lastname is" + persons.lastname + " and he is" + persons.age + "years old";
+    
+                            //  FOR LOOP
+        var tab;
+        for ( tab = 1; tab<=10; tab++){
+            for( var n = 1; n<=10; n++){
+                document.getElementById("demo2").innerHTML += tab + "x" + n + "=" + tab * n + "<br>" 
+            }
+        }
+    </script>
+</body>
+</html>

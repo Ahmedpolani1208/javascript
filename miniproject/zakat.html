@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:darkgrey ;">
+ <center>
+
+    <h1>ENTER AMOUNT TO CALCULATE</h1>
+    <input id="inp"style=" height:40px;width:200px;" type="number" placeholder="enter your salary" ><br><br><br>
+    <button onclick="cal()" style="font: size 90px; background-color:red ; font-weight:600;font-family:cursive; border-radius:15px; height:40px;width:130px;">Calculate</button><br><br><br><br>
+    <p id="para" style="font-size:90px ; color:red; font-family:cursive"></p>
+ </center>
+
+
+ <script>
+
+    function cal(){
+        var inp = document.getElementById("inp").value;
+        var ten = inp/10
+        var half = ten/2
+        var zakat= half/2
+        document.getElementById("para").innerHTML=zakat
+
+    }
+ </script>
+</body>
+</html>

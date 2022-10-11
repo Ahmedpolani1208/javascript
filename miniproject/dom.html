@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hide{
+        display: none;
+    }
+    #lesss{
+        display: none;
+
+    }
+</style>
+<body>
+ <center>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <span id="hide">
+             Itaque inventore, laboriosam ex distinctio 
+            cupiditate odit sequi ab neque alias. Aspernatur animi
+             non quidem aliquam dicta explicabo dolorum, 
+             vel voluptatibus fugit.</span></p>
+    
+             <button onclick="read()" id="show" >Read More</button>
+             <button onclick="less()" id="lesss">Read Less</button>
+ </center>
+
+         <script>
+            function read(){
+                var s = document.getElementById("hide");
+                var b = document.getElementById("show");
+                var l = document.getElementById("lesss");
+
+
+                
+                s.style="display:block;"
+                b.style="display:none;"
+                l.style="display:block;"
+
+
+
+
+            }
+            function less(){
+                var s = document.getElementById("hide");
+                var b = document.getElementById("show");
+                var l = document.getElementById("lesss");
+
+
+                b.style="display:block;"
+
+                s.style="display:none;"
+                l.style="display:none;"
+
+
+
+
+            }
+         </script>
+</body>
+</html>
